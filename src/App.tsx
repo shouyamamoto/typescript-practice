@@ -60,11 +60,31 @@ let memory: 2 | 3 | 4
 memory = 2
 
 // type of 型を取得して他の型を指定する
+// JSONのデータタイプが複雑だった場合、それをコピーすることによって自分たちで型を指定していかなくても継承してくれるので楽
 let massage: string = 'Hi'
 let massage2: typeof massage = 'Hello'
 
 let animal = {cat: 'small cat'}
-let newAnimal: typeof animal = {cat: 2}
+let newAnimal: typeof animal = {cat: 'cat'}
+
+// key of
+type KEYS = {
+  primary: string
+  secondary: string
+}
+
+// KEYSのprimaryとかsecondaryをunionTypeで取り出してくれる(どちらかの文字列しかいれられない)
+let key: keyof KEYS
+key = "primary"
+
+// typeofとkeyofの組み合わせ
+const SPORTS = {
+  soccer: "Soccer",
+  baseball: "Baseball",
+}
+let keySports: keyof typeof SPORTS
+keySports = "baseball"
+
 
 function App() {
   return (

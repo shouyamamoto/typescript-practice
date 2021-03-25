@@ -59,6 +59,13 @@ company = "Facebook"
 let memory: 2 | 3 | 4
 memory = 2
 
+// type of 型を取得して他の型を指定する
+let massage: string = 'Hi'
+let massage2: typeof massage = 'Hello'
+
+let animal = {cat: 'small cat'}
+let newAnimal: typeof animal = {cat: 2}
+
 function App() {
   return (
     <div className="App">

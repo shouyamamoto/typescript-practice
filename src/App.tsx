@@ -24,6 +24,25 @@ let name: NAME = {
 const func1 = (x: number, y: number):number => { return x + y}
 console.log(func1(1, 2))
 
+type PROFILE = {
+  age: number,
+  city: string,
+}
+
+type LOGIN = {
+  username: string,
+  password: string,
+}
+
+type USER =  PROFILE & LOGIN
+const userA: USER = {
+  age: 30,
+  city: 'tokyo',
+  username: 'aa',
+  password: 'aaa',
+}
+
+console.log(userA)
 
 function App() {
   return (

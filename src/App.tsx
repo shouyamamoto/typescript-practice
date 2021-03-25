@@ -42,7 +42,16 @@ const userA: USER = {
   password: 'aaa',
 }
 
-console.log(userA)
+// unionTypes　変数が受け取れる型を指定できる
+let value: boolean | number
+value = true
+value = 10
+
+// 配列に入る型を指定できる
+let arryUni: (number | string)[]
+arryUni = [0,1,'aa']
+
+
 
 function App() {
   return (

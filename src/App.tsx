@@ -51,7 +51,13 @@ value = 10
 let arryUni: (number | string)[]
 arryUni = [0,1,'aa']
 
+// literalTypes 
+//この変数に入る値を指定できる
+let company: "Facebook" | "Google" | "Amazon"
+company = "Facebook"
 
+let memory: 2 | 3 | 4
+memory = 2
 
 function App() {
   return (
